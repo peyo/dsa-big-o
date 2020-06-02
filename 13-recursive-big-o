@@ -1,0 +1,54 @@
+1. Counting Sheep
+
+  Linear O(n)
+  Count down
+
+2. Power Calculator
+
+  Linear O(n)
+  Count down
+
+3. Reverse String
+
+  Linear O(n)
+  Substr until no more characters remain
+
+4. nth Triangular Number
+
+  Linear O(n)
+  Add to add and count down
+
+5. String Splitter
+
+  Linear O(n)
+  Count incrementally with i using .indexOf
+
+6. Fibonacci
+
+  Linear O(n)
+  Count down through n - 1 and n - 1 until n = 0 and 1
+
+7. Factorial
+
+  Linear O(n)
+  Count down through n -1 until n = 0 and 1
+
+8-9. Find a way out of the maze
+
+  Linear O(n)
+  Simple evaluation of spaces one by one. No divisions, no nested loops
+
+10. Anagrams
+
+  Polynomial O(n^k)
+  Function nested in FOR loop
+
+11. Organization Chart
+
+  Polynomial O(n^k)
+  Map function nested in FOR loop
+
+12. Binary Representation
+
+  Linear O(n)
+  Algorithm counts down until dec = 0

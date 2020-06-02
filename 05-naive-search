@@ -1,0 +1,12 @@
+What is the Big O of the following algorithm? Explain your answer
+
+function naiveSearch(array, item) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === item) {
+            return i;
+        }
+    }
+}
+
+  Linear - O(n)
+  The algorithm needs to search through the values of an array one by one. The time and space increase linearly with the array's length.

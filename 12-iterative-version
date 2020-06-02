@@ -1,0 +1,156 @@
+1.1 and 1.2 wrong exercises! :)
+
+1.1) You are sitting in a room with 15 people. You want to find a playmate for your dog, preferably of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You stand up and yell out, who here has a golden retriever and would like to be a play date for my golden. Someone yells - "I do, be happy to bring him over"
+
+  const dogFinder = (myDog) => {
+
+    const dogsInPark = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    
+    if (dogsInPark.filter(dog => dog === myDog)) {
+      return `I do, be happy to bring him over!`
+    }
+  }
+
+  const myDog = 13
+  console.log(dogFinder(myDog))
+
+1.2) You are sitting in a room with 15 people. You want to find a playmate for your dog who is of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You start with the first person and ask him if he has a golden retriever. He says no, then you ask the next person, and the next, and the next until you find someone who has a golden or there is no one else to ask.
+
+  const dogFinderTwo = () => {
+    const dogsInPark = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    for (let i = 0; i < dogsInPark.length; ++i) {
+      if (dogsInPark[i] === myDog) {
+        return console.log(
+          `Do you have a golden retriever?`,
+          `\nPerson ${i + 1}: Yes, I do!\n`
+        )
+      } else {
+        console.log(
+          `Do you have a golden retriever?`,
+          `\nPerson ${i + 1}: Nope. That person might.\n`
+        )
+      }
+    }      
+  }
+
+  const myDog = 13
+  console.log(dogFinderTwo(myDog))
+
+1. Counting Sheep
+
+  const count = (input) => {
+
+    for (let i = 0; i < input; i++) {
+      console.log(`${i + 1}: Another sheep jumps over the fence`)
+    }
+    return `All sheep jumped over the fence.`
+  }
+
+  const input = 4;
+  console.log(count(input));
+
+2. Power Calculator
+
+  const exp = (b, e) => {
+
+    let c = b
+    for (i = 0; i < e; i++) {
+      c *= b
+    }
+    return c;
+  }
+  
+  const b = 10;
+  const e = 4;
+  console.log(exp(b, e));
+
+3. Reverse String
+
+  const rev = (str) => {
+
+    let reversedStr = []
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversedStr.push(str[i]);
+    }
+    return reversedStr.join("")
+  }
+
+  const str = "hello world!";
+  console.log(rev(str));
+
+  OR
+
+  const rev = (str) => {
+
+    let reversedStr = []
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversedStr += str[i];
+    }
+    return reversedStr
+  }
+
+  const str = "hello world!";
+  console.log(rev(str));
+
+4. nth Triangular Number
+
+  const tri = (n) => {
+
+    let sum = 0
+    for (let i = n; i > 0; i--) {
+      sum += i
+    }
+
+    return sum
+  }
+
+  console.log(tri(3))
+
+5. String Splitter
+
+  const split = function (str, delim) {
+    let arr = [""];
+    let j = 0;
+
+    for (let i = 0; i < str.length; i++) {
+      if (str.charAt(i) === delim) {
+        j++;
+        arr.push("");
+      } else {
+        arr[j] = arr[j] + str.charAt(i);
+      }
+    }
+    return arr;
+  };
+
+  console.log(split("02/20/2020", "/"));
+
+  // Reference:
+  // https://stackoverflow.com/questions/24765710/writing-a-string-splitting-function-without-using-the-split-method-in-javascript
+
+6. Fibonacci
+
+  const fib = (n) => {
+
+    let fibArr = [0, 1]
+    for (let i = 2; i <= n; i++) {
+      fibArr.push(fibArr[i - 2] + fibArr[i - 1])
+    } 
+    return fibArr[n]
+  }
+
+  const n = 10;
+  console.log(fib(n));
+
+7. Factorial
+
+  const fact = (n) => {
+    let x = n;
+
+    for (let i = n-1; i > 0; i--) {
+      x *= i
+    }
+    return x;
+  }
+
+  console.log(fact(5));

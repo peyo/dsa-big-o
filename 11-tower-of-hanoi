@@ -1,0 +1,78 @@
+The Tower of Hanoi is a very famous mathematical puzzle (some call it game!). This is how it goes:
+
+There are three rods and a number of disks of different sizes which can slide onto any rod. The puzzle starts with the disks neatly stacked in ascending order of size on one rod, the smallest disk at the top (making a conical shape). The other two rods are empty to begin with.
+
+The goal of the puzzle is to move the entire stack of rods to another rod (can't be the original rod where it was stacked before) where it will be stacked in the ascending order as well. This should be done obeying the following rules: i) Only one disk may be moved at a time ii) Each move consists of taking the upper disk from one of the rods and sliding it onto another rod, on top of the other disks that may already be present on that rod. iii) A larger disk may not placed on top of a smaller disk
+
+Input:
+
+Rod A	          Rod B	          Rod C
+----		
+---------		
+-------------		
+
+Output:
+
+Rod A	          Rod B	          Rod C
+                                ----
+                                ---------
+                                -------------
+
+Derive an algorithm to solve the Tower of Hanoi puzzle.
+
+Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
+
+  const move = (n, source, destination, buffer) => {
+
+    // Verify that there are disks.
+    if (n > 0) {
+
+      // Move one disk to buffer rod.
+      move(n - 1, source, buffer, destination);
+
+      // Move nth disk from source to destination.
+      destination.push(source.pop())
+
+      // Display progress
+      console.log(JSON.stringify(A), JSON.stringify(B), JSON.stringify(C), "\n-----------------")
+
+      // Move the disk (n - 1) from the buffer to the destination.
+      move(n - 1, buffer, destination, source);
+    }
+  };
+
+// Disk starting position
+const A = [5, 4, 3, 2, 1]
+const B = []
+const C = []
+
+// Invoke
+move(5, A, C, B, 0);
+
+If you are given 5 disks, how do the rods look like after 7 recursive calls?
+
+  [ 5, 4, 3, 2 ] [] [ 1 ] 
+  -----------------------
+  [ 5, 4, 3 ] [ 2 ] [ 1 ] 
+  -----------------------
+  [ 5, 4, 3 ] [ 2, 1 ] [] 
+  -----------------------
+  [ 5, 4 ] [ 2, 1 ] [ 3 ] 
+  -----------------------
+  [ 5, 4, 1 ] [ 2 ] [ 3 ] 
+  -----------------------
+  [ 5, 4, 1 ] [] [ 3, 2 ] 
+  -----------------------
+  [ 5, 4 ] [] [ 3, 2, 1 ] 
+
+How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
+
+  2^h - 1
+  3 disks - 7 moves
+  4 disks - 15 moves
+  5 disks - 31 moves
+
+What is the runtime of your algorithm?
+
+  Exponential - O(2^n)
+  The number of moves more than doubles when one disk is added to the challenge.
