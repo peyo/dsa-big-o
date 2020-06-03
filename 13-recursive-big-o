@@ -46,7 +46,7 @@
 11. Organization Chart
 
   Linear O(n)
-  The time linearly expands based on the how large the original object is
+  The time required to add \n and indentation to obj[key] linearly increases based on the how large the original object is.
 
 12. Binary Representation
 
