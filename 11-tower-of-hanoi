@@ -41,13 +41,13 @@ Implement your algorithm using recursion. Your program should display each movem
     }
   };
 
-// Disk starting position
-const A = [5, 4, 3, 2, 1]
-const B = []
-const C = []
+  // Disk starting position
+  const A = [5, 4, 3, 2, 1]
+  const B = []
+  const C = []
 
-// Invoke
-move(5, A, C, B, 0);
+  // Invoke
+  move(5, A, C, B, 0);
 
 If you are given 5 disks, how do the rods look like after 7 recursive calls?
 

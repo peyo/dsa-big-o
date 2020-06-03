@@ -35,20 +35,20 @@
 
 8-9. Find a way out of the maze
 
-  Linear O(n)
-  Simple evaluation of spaces one by one. No divisions, no nested loops
+  Exponential O(2^n)
+  The number of moves will be determined by the size of the maze
 
 10. Anagrams
 
-  Polynomial O(n^k)
-  Function nested in FOR loop
+  Factorial O(n!)
+  Function nested in FOR loop. The number of output increases factorially. A 4 letter input will result in 24 outputs.
 
 11. Organization Chart
 
-  Polynomial O(n^k)
-  Map function nested in FOR loop
+  Linear O(n)
+  The time linearly expands based on the how large the original object is
 
 12. Binary Representation
 
-  Linear O(n)
-  Algorithm counts down until dec = 0
+  Logarithmic O(n)
+  Algorithm counts down by 2 until dec = 0
